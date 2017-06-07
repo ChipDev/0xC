@@ -4,7 +4,7 @@ import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedE
 /**
  * Created by blake on 6/6/17.
  */
-public class PingCommand {
+public class PingCommand implements GenericCommand {
 
     @EventSubscriber
     public void messageRecieved(MessageReceivedEvent event){
@@ -14,4 +14,11 @@ public class PingCommand {
     }
 
 
+    public String getName() {
+        return "ping";
+    }
+
+    public String getDescription() {
+        return "What did you expect? Obviously a picture of one of the items from the great golf brand, Ping.";
+    }
 }
